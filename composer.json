@@ -1,0 +1,18 @@
+{
+    "name": "ktcd/emas",
+    "description": "Event Management System Package",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Irvan Maulana",
+            "email": "me@tukangremot.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Ktcd\\Emas\\": "src/"
+        }
+    },
+    "require": {}
+}
