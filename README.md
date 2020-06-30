@@ -1,0 +1,2 @@
+# EMaS
+Event Management System
