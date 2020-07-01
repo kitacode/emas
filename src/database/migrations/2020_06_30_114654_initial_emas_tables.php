@@ -21,13 +21,15 @@ class InitialEmasTables extends Migration
             $table->string('theme')->nullable();
             $table->string('committee')->nullable();
             $table->string('timezone')->nullable();
+            $table->string('date_format')->nullable();
+            $table->string('datetime_format')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->longText('term_and_condition')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
-            $table->boolean('show_barcode')->default(0);
-            $table->boolean('is_published')->default(0);
+            $table->boolean('show_barcode')->default(1);
+            $table->boolean('is_published')->default(1);
             $table->boolean('is_active')->default(1);
             $table->timestamps();
         });

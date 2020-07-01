@@ -14,6 +14,8 @@ class Event extends Model
         'theme',
         'committee',
         'timezone',
+        'date_format',
+        'datetime_format',
         'start_date',
         'end_date',
         'term_and_condition',
@@ -30,5 +32,17 @@ class Event extends Model
     {
         parent::__construct($attributes);
         $this->setTable(config('ktcd_emas.event_table'));
+    }
+
+    public function getStartDateFormattedAttribute()
+    {
+        $parseDate = \Carbon\Carbon::parse($this->start_date);
+        return $parseDate->format(config('ktcd_emas.format.date.' . $this->date_format));
+    }
+
+    public function getEndDateFormattedAttribute()
+    {
+        $parseDate = \Carbon\Carbon::parse($this->end_date);
+        return $parseDate->format(config('ktcd_emas.format.date.' . $this->date_format));
     }
 }
