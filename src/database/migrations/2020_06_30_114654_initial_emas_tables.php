@@ -22,6 +22,7 @@ class InitialEmasTables extends Migration
             $table->string('committee')->nullable();
             $table->string('timezone')->nullable();
             $table->string('date_format')->nullable();
+            $table->string('time_format')->nullable();
             $table->string('datetime_format')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();

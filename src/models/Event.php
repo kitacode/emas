@@ -15,6 +15,7 @@ class Event extends Model
         'committee',
         'timezone',
         'date_format',
+        'time_format',
         'datetime_format',
         'start_date',
         'end_date',

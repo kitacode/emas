@@ -2,15 +2,16 @@
 
 return [
     'event' => [
-        'name' => 'Nama Acara',
-        'theme' => 'Tema Acara',
         'committee' => 'Panitia Acara',
-        'timezone' => 'Zona Waktu Acara',
-        'date_format' => 'Format Tanggal Acara',
-        'datetime_format' => 'Format Tanggal dan Waktu Acara',
         'date' => 'Tanggal Acara',
-        'start_date' => 'Tanggal Mulai Acara',
+        'date_format' => 'Format Tanggal Acara',
+        'datetime_format' => 'Format Tanggal dan Jam Acara',
         'end_date' => 'Tanggal Berakhir Acara',
+        'name' => 'Nama Acara',
+        'start_date' => 'Tanggal Mulai Acara',
         'term_and_condition' => 'Syarat dan Ketentuan',
+        'theme' => 'Tema Acara',
+        'time_format' => 'Format Jam Acara',
+        'timezone' => 'Zona Waktu Acara',
     ]
 ];
