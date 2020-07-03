@@ -53,6 +53,17 @@ class InitialEmasTables extends Migration
             $table->boolean('is_published')->default(1);
             $table->timestamps();
         });
+
+        Schema::create(config('ktcd_emas.speaker_table'), function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->bigInteger('event_id')->index()->nullable();
+            $table->bigInteger('session_id')->index()->nullable();
+            $table->boolean('is_published')->default(1);
+            $table->timestamps();
+        });
     }
 
     /**

@@ -22,10 +22,24 @@ return [
     'session' => [
         'index' => 'Sesi',
         'create' => 'Tambah Sesi',
+        'edit' => 'Ubah Sesi',
         'list' => 'Daftar Sesi',
         'name' => 'Nama Sesi',
+        'pricing' => [
+            'index' => 'Harga Sesi',
+            'create' => 'Tambah Harga Sesi',
+            'edit' => 'Ubah Harga Sesi',
+            'list' => 'Daftar Harga Sesi',
+        ],
         'type' => [
             'index' => 'Tipe Sesi'
-        ]
-    ]
+        ],
+        'view' => 'Lihat Detail Sesi',
+    ],
+    'speaker' => [
+        'index' => 'Pembicara',
+        'create' => 'Tambah Pembicara',
+        'edit' => 'Ubah Pembicara',
+        'list' => 'Daftar Pembicara',
+    ],
 ];

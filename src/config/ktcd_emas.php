@@ -4,6 +4,7 @@ return [
     'event_table' => 'events',
     'session_type_table' => 'session_types',
     'session_table' => 'sessions',
+    'speaker_table' => 'speakers',
     'format' => [
         'date' => [
             'yyyy-mm-dd' => 'Y-m-d',
