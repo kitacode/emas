@@ -23,4 +23,9 @@ class Session extends Model
         parent::__construct($attributes);
         $this->setTable(config('ktcd_emas.session_table'));
     }
+
+    public function type()
+    {
+        return $this->belongsTo(SessionType::class, 'session_type_id');
+    }
 }
