@@ -8,5 +8,10 @@ return [
             'time_format' => 'Pilih format jam acara',
             'timezone' => 'Pilih zona waktu acara',
         ]
+    ],
+    'session' => [
+        'select' => [
+            'type' => 'Pilih tipe sesi'
+        ]
     ]
 ];

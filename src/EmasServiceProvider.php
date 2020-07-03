@@ -13,9 +13,9 @@ class EmasServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/config/ktcd_emas.php', 'ktcd_emas');
-        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
-        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'emas');
+        $this->mergeConfigFrom(__DIR__ . '/config/ktcd_emas.php', 'ktcd_emas');
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+        $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'emas');
     }
 
     /**

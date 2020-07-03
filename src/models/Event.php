@@ -24,7 +24,6 @@ class Event extends Model
         'updated_by',
         'show_barcode',
         'is_published',
-        'is_active',
         'created_at',
         'updated_at'
     ];
