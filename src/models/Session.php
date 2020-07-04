@@ -9,6 +9,7 @@ class Session extends Model
     protected $fillable = [
         'id',
         'name',
+        'description',
         'created_by',
         'updated_by',
         'event_id',
@@ -28,4 +29,5 @@ class Session extends Model
     {
         return $this->belongsTo(SessionType::class, 'session_type_id');
     }
+
 }

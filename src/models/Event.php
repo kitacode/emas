@@ -20,6 +20,7 @@ class Event extends Model
         'start_date',
         'end_date',
         'term_and_condition',
+        'description',
         'created_by',
         'updated_by',
         'show_barcode',

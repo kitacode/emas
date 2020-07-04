@@ -26,7 +26,10 @@ class InitialEmasTables extends Migration
             $table->string('datetime_format')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
             $table->longText('term_and_condition')->nullable();
+            $table->longText('description')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
             $table->boolean('show_barcode')->default(1);
@@ -37,6 +40,7 @@ class InitialEmasTables extends Migration
         Schema::create(config('ktcd_emas.session_type_table'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->longText('description')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
             $table->bigInteger('event_id')->index()->nullable();
@@ -46,6 +50,7 @@ class InitialEmasTables extends Migration
         Schema::create(config('ktcd_emas.session_table'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->longText('description')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
             $table->bigInteger('event_id')->index();
@@ -57,6 +62,22 @@ class InitialEmasTables extends Migration
         Schema::create(config('ktcd_emas.speaker_table'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->longText('description')->nullable();
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->bigInteger('event_id')->index()->nullable();
+            $table->bigInteger('session_id')->index()->nullable();
+            $table->boolean('is_published')->default(1);
+            $table->timestamps();
+        });
+
+        Schema::create(config('ktcd_emas.price_table'), function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->bigInteger('price');
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
+            $table->longText('description')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
             $table->bigInteger('event_id')->index()->nullable();

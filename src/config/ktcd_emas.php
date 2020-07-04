@@ -2,6 +2,7 @@
 
 return [
     'event_table' => 'events',
+    'price_table' => 'prices',
     'session_type_table' => 'session_types',
     'session_table' => 'sessions',
     'speaker_table' => 'speakers',

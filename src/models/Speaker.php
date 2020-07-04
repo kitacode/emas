@@ -9,6 +9,7 @@ class Speaker extends Model
     protected $fillable = [
         'id',
         'name',
+        'description',
         'created_by',
         'updated_by',
         'event_id',
