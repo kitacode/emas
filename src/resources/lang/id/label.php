@@ -19,18 +19,20 @@ return [
         'time_format' => 'Format Jam Acara',
         'timezone' => 'Zona Waktu Acara',
     ],
+    'price' => [
+        'index' => 'Harga',
+        'create' => 'Tambah Harga',
+        'edit' => 'Ubah Harga',
+        'list' => 'Daftar Harga',
+        'start_time' => 'Waktu Mulai Berlaku',
+        'end_time' => 'Waktu Akhir Berlaku'
+    ],
     'session' => [
         'index' => 'Sesi',
         'create' => 'Tambah Sesi',
         'edit' => 'Ubah Sesi',
         'list' => 'Daftar Sesi',
         'name' => 'Nama Sesi',
-        'pricing' => [
-            'index' => 'Harga Sesi',
-            'create' => 'Tambah Harga Sesi',
-            'edit' => 'Ubah Harga Sesi',
-            'list' => 'Daftar Harga Sesi',
-        ],
         'type' => [
             'index' => 'Tipe Sesi'
         ],
