@@ -1,6 +1,17 @@
 <?php
 
 return [
+    'accommodation' => [
+        'index' => 'Akomodasi',
+        'create' => 'Tambah Akomodasi',
+        'edit' => 'Ubah Akomodasi',
+        'list' => 'Daftar Akomodasi',
+        // 'name' => 'Nama Sesi',
+        // 'type' => [
+        //     'index' => 'Tipe Sesi'
+        // ],
+        // 'view' => 'Lihat Detail Sesi',
+    ],
     'certificate' => [
         'index' => 'Sertifikat'
     ],
@@ -22,6 +33,7 @@ return [
     'module' => 'Modul',
     'price' => [
         'index' => 'Harga',
+        'category' => 'Kategori Harga',
         'create' => 'Tambah Harga',
         'edit' => 'Ubah Harga',
         'list' => 'Daftar Harga',
@@ -44,5 +56,6 @@ return [
         'create' => 'Tambah Pembicara',
         'edit' => 'Ubah Pembicara',
         'list' => 'Daftar Pembicara',
+        'total' => 'Jumlah Pembicara'
     ],
 ];
