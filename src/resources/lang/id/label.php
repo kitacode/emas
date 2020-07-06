@@ -7,7 +7,10 @@ return [
         'edit' => 'Ubah Akomodasi',
         'list' => 'Daftar Akomodasi',
         'name' => 'Nama Akomodasi',
-        'view' => 'Lihat Detail Akomodasi'
+        'price_week_day' => 'Harga Tengah Pekan',
+        'price_week_end' => 'Harga Akhir Pekan',
+        'view' => 'Lihat Detail Akomodasi',
+        'quota' => 'Kuota',
     ],
     'certificate' => [
         'index' => 'Sertifikat'
