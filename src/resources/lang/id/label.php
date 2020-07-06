@@ -6,11 +6,8 @@ return [
         'create' => 'Tambah Akomodasi',
         'edit' => 'Ubah Akomodasi',
         'list' => 'Daftar Akomodasi',
-        // 'name' => 'Nama Sesi',
-        // 'type' => [
-        //     'index' => 'Tipe Sesi'
-        // ],
-        // 'view' => 'Lihat Detail Sesi',
+        'name' => 'Nama Akomodasi',
+        'view' => 'Lihat Detail Akomodasi'
     ],
     'certificate' => [
         'index' => 'Sertifikat'

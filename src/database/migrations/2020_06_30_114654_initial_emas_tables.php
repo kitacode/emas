@@ -30,8 +30,8 @@ class InitialEmasTables extends Migration
             $table->timestamp('end_time')->nullable();
             $table->longText('term_and_condition')->nullable();
             $table->longText('description')->nullable();
-            $table->unsignedBigInteger('created_by')->nullable();
-            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('created_by')->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->boolean('show_barcode')->default(1);
             $table->boolean('is_published')->default(1);
             $table->timestamps();
@@ -41,9 +41,9 @@ class InitialEmasTables extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->longText('description')->nullable();
-            $table->unsignedBigInteger('created_by')->nullable();
-            $table->unsignedBigInteger('updated_by')->nullable();
-            $table->bigInteger('event_id')->index()->nullable();
+            $table->unsignedBigInteger('created_by')->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->index()->nullable();
+            $table->unsignedBigInteger('event_id')->index()->nullable();
             $table->timestamps();
         });
 
@@ -51,10 +51,10 @@ class InitialEmasTables extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->longText('description')->nullable();
-            $table->unsignedBigInteger('created_by')->nullable();
-            $table->unsignedBigInteger('updated_by')->nullable();
-            $table->bigInteger('event_id')->index();
-            $table->bigInteger('session_type_id')->index()->nullable();
+            $table->unsignedBigInteger('created_by')->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->index()->nullable();
+            $table->unsignedBigInteger('event_id')->index();
+            $table->unsignedBigInteger('session_type_id')->index()->nullable();
             $table->boolean('is_published')->default(1);
             $table->timestamps();
         });
@@ -63,10 +63,10 @@ class InitialEmasTables extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->longText('description')->nullable();
-            $table->unsignedBigInteger('created_by')->nullable();
-            $table->unsignedBigInteger('updated_by')->nullable();
-            $table->bigInteger('event_id')->index()->nullable();
-            $table->bigInteger('session_id')->index()->nullable();
+            $table->unsignedBigInteger('created_by')->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->index()->nullable();
+            $table->unsignedBigInteger('event_id')->index()->nullable();
+            $table->unsignedBigInteger('session_id')->index()->nullable();
             $table->boolean('is_published')->default(1);
             $table->timestamps();
         });
@@ -74,14 +74,30 @@ class InitialEmasTables extends Migration
         Schema::create(config('ktcd_emas.price_table'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->bigInteger('price');
+            $table->unsignedBigInteger('price');
             $table->timestamp('start_time')->nullable();
             $table->timestamp('end_time')->nullable();
             $table->longText('description')->nullable();
-            $table->unsignedBigInteger('created_by')->nullable();
-            $table->unsignedBigInteger('updated_by')->nullable();
-            $table->bigInteger('event_id')->index()->nullable();
-            $table->bigInteger('session_id')->index()->nullable();
+            $table->unsignedBigInteger('created_by')->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->index()->nullable();
+            $table->unsignedBigInteger('event_id')->index()->nullable();
+            $table->unsignedBigInteger('session_id')->index()->nullable();
+            $table->boolean('is_published')->default(1);
+            $table->timestamps();
+        });
+
+        Schema::create(config('ktcd_emas.accommodation_table'), function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->longText('address')->nullable();
+            $table->longText('description')->nullable();
+            $table->unsignedBigInteger('price_week_day')->nullable();
+            $table->unsignedBigInteger('price_week_end')->nullable();
+            $table->unsignedBigInteger('quota')->nullable();
+            $table->unsignedBigInteger('created_by')->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->index()->nullable();
+            $table->unsignedBigInteger('event_id')->index()->nullable();
+            $table->unsignedBigInteger('parent_id')->index()->nullable();
             $table->boolean('is_published')->default(1);
             $table->timestamps();
         });
@@ -99,5 +115,6 @@ class InitialEmasTables extends Migration
         Schema::dropTable(config('ktcd_emas.session_table'));
         Schema::dropTable(config('ktcd_emas.speaker_table'));
         Schema::dropTable(config('ktcd_emas.price_table'));
+        Schema::dropTable(config('ktcd_emas.accommodation_table'));
     }
 }
