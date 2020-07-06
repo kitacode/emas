@@ -95,5 +95,9 @@ class InitialEmasTables extends Migration
     public function down()
     {
         Schema::dropTable(config('ktcd_emas.event_table'));
+        Schema::dropTable(config('ktcd_emas.session_type_table'));
+        Schema::dropTable(config('ktcd_emas.session_table'));
+        Schema::dropTable(config('ktcd_emas.speaker_table'));
+        Schema::dropTable(config('ktcd_emas.price_table'));
     }
 }
