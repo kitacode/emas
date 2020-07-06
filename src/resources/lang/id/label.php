@@ -19,6 +19,7 @@ return [
         'time_format' => 'Format Jam Acara',
         'timezone' => 'Zona Waktu Acara',
     ],
+    'module' => 'Modul',
     'price' => [
         'index' => 'Harga',
         'create' => 'Tambah Harga',
