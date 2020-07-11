@@ -101,6 +101,22 @@ class InitialEmasTables extends Migration
             $table->boolean('is_published')->default(1);
             $table->timestamps();
         });
+
+        Schema::create(config('ktcd_emas.participant_table'), function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('email')->unique()->nullable();
+            $table->string('password')->nullable();
+            $table->string('phone_1')->nullable();
+            $table->string('phone_2')->nullable();
+            $table->longText('address')->nullable();
+            $table->string('country')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->unsignedBigInteger('created_by')->index()->nullable();
+            $table->unsignedBigInteger('updated_by')->index()->nullable();
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -116,5 +132,6 @@ class InitialEmasTables extends Migration
         Schema::dropTable(config('ktcd_emas.speaker_table'));
         Schema::dropTable(config('ktcd_emas.price_table'));
         Schema::dropTable(config('ktcd_emas.accommodation_table'));
+        Schema::dropTable(config('ktcd_emas.participant_table'));
     }
 }

@@ -25,6 +25,7 @@ foreach ($dateFormat as $kd => $vd) {
 return [
     'accommodation_table' => 'accommodations',
     'event_table' => 'events',
+    'participant_table' => 'participants',
     'price_table' => 'prices',
     'session_type_table' => 'session_types',
     'session_table' => 'sessions',
