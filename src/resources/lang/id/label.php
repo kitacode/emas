@@ -50,6 +50,7 @@ return [
         'index' => 'Sesi',
         'create' => 'Tambah Sesi',
         'edit' => 'Ubah Sesi',
+        'link' => 'Tautan Sesi',
         'list' => 'Daftar Sesi',
         'name' => 'Nama Sesi',
         'type' => [

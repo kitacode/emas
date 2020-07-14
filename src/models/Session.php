@@ -14,6 +14,7 @@ class Session extends Model
         'updated_by',
         'event_id',
         'session_type_id',
+        'link',
         'is_published',
         'created_at',
         'updated_at'
