@@ -15,7 +15,17 @@ class Participant extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
+        'phone_1',
+        'phone_2',
+        'address',
+        'country',
+        'email_verified_at',
+        'event_id',
+        'created_by',
+        'updated_by',
     ];
 
     /**

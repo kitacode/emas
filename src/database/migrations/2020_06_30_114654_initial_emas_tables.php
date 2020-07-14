@@ -55,6 +55,7 @@ class InitialEmasTables extends Migration
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->unsignedBigInteger('event_id')->index();
             $table->unsignedBigInteger('session_type_id')->index()->nullable();
+            $table->longText('link')->nullable();
             $table->boolean('is_published')->default(1);
             $table->timestamps();
         });
@@ -112,6 +113,7 @@ class InitialEmasTables extends Migration
             $table->longText('address')->nullable();
             $table->string('country')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->unsignedBigInteger('event_id')->index()->nullable();
             $table->unsignedBigInteger('created_by')->index()->nullable();
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->rememberToken();

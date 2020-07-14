@@ -31,6 +31,12 @@ return [
         'timezone' => 'Zona Waktu Acara',
     ],
     'module' => 'Modul',
+    'participant' => [
+        'index' => 'Peserta',
+        'create' => 'Tambah Peserta',
+        'edit' => 'Ubah Peserta',
+        'list' => 'Daftar Peserta'
+    ],
     'price' => [
         'index' => 'Harga',
         'category' => 'Kategori Harga',
