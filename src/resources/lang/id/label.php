@@ -50,9 +50,13 @@ return [
         'index' => 'Sesi',
         'create' => 'Tambah Sesi',
         'edit' => 'Ubah Sesi',
+        'end_date' => 'Tanggal Akhir Sesi',
+        'end_time' => 'Waktu Akhir Sesi',
         'link' => 'Tautan Sesi',
         'list' => 'Daftar Sesi',
         'name' => 'Nama Sesi',
+        'start_date' => 'Tanggal Mulai Sesi',
+        'start_time' => 'Waktu Mulai Sesi',
         'type' => [
             'index' => 'Tipe Sesi'
         ],
