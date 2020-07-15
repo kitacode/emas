@@ -53,6 +53,7 @@ class InitialEmasTables extends Migration
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->unsignedBigInteger('event_id')->index();
             $table->unsignedBigInteger('session_type_id')->index()->nullable();
+            $table->unsignedBigInteger('session_parallel_id')->index()->nullable();
             $table->longText('link')->nullable();
             $table->boolean('is_published')->default(1);
             $table->timestamps();
@@ -62,6 +63,12 @@ class InitialEmasTables extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->longText('description')->nullable();
+            $table->date('date')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
+            $table->timestamp('time')->nullable();
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
             $table->unsignedBigInteger('created_by')->index()->nullable();
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->unsignedBigInteger('event_id')->index()->nullable();

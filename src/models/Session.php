@@ -20,6 +20,7 @@ class Session extends Model
         'updated_by',
         'event_id',
         'session_type_id',
+        'session_parallel_id',
         'link',
         'is_published',
         'created_at',
@@ -35,5 +36,10 @@ class Session extends Model
     public function type()
     {
         return $this->belongsTo(SessionType::class, 'session_type_id');
+    }
+
+    public function parallel()
+    {
+        return $this->belongsTo(SessionParallel::class, 'session_parallel_id');
     }
 }
