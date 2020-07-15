@@ -27,9 +27,14 @@ return [
     'event_table' => 'events',
     'participant_table' => 'participants',
     'price_table' => 'prices',
-    'session_type_table' => 'session_types',
-    'session_speaker_table' => 'session_speakers',
+
+    'schedule_table' => 'schedules',
+
     'session_table' => 'sessions',
+    'session_parallel' => 'session_parallels',
+    'session_speaker_table' => 'session_speakers',
+    'session_type_table' => 'session_types',
+    
     'speaker_table' => 'speakers',
 
     'format' => [

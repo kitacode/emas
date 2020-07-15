@@ -21,6 +21,8 @@ class Event extends Model
         'end_date',
         'term_and_condition',
         'description',
+        'has_parallel_session',
+        'link',
         'created_by',
         'updated_by',
         'show_barcode',

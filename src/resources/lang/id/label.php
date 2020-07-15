@@ -22,7 +22,9 @@ return [
         'datetime_format' => 'Format Tanggal dan Jam Acara',
         'edit' => 'Ubah Acara',
         'end_date' => 'Tanggal Berakhir Acara',
+        'has_parallel_session' => 'Memiliki Sesi Paralel',
         'index' => 'Acara',
+        'link' => 'Tautan Acara',
         'name' => 'Nama Acara',
         'start_date' => 'Tanggal Mulai Acara',
         'term_and_condition' => 'Syarat dan Ketentuan',
@@ -61,6 +63,12 @@ return [
         'link' => 'Tautan Sesi',
         'list' => 'Daftar Sesi',
         'name' => 'Nama Sesi',
+        'parallel' => [
+            'index' => 'Sesi Paralel',
+            'create' => 'Tambah Sesi Paralel',
+            'edit' => 'Ubah Sesi Paralel',
+            'list' => 'Daftar Sesi Paralel',
+        ],
         'start_date' => 'Tanggal Mulai Sesi',
         'start_time' => 'Waktu Mulai Sesi',
         'type' => [
