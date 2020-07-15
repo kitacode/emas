@@ -155,14 +155,17 @@ class InitialEmasTables extends Migration
 
         Schema::create(config('ktcd_emas.schedule_table'), function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->longText('description')->nullable();
+            $table->longText('topic')->nullable();
             $table->date('date')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->timestamp('time')->nullable();
             $table->timestamp('start_time')->nullable();
             $table->timestamp('end_time')->nullable();
-            $table->text('topic');
-            $table->string('speaker')->nullable();
+            $table->string('pic')->nullable();
+            $table->unsignedBigInteger('model_id')->index()->nullable();
+            $table->string('model_type')->index()->nullable();
             $table->unsignedBigInteger('created_by')->index()->nullable();
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->unsignedBigInteger('event_id')->index();
