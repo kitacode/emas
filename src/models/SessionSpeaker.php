@@ -4,15 +4,12 @@ namespace Ktcd\Emas\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Speaker extends Model
+class SessionSpeaker extends Model
 {
     protected $fillable = [
         'id',
-        'name',
-        'description',
-        'created_by',
-        'updated_by',
-        'event_id',
+        'speaker_id',
+        'session_id',
         'created_at',
         'updated_at'
     ];
@@ -20,6 +17,6 @@ class Speaker extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->setTable(config('ktcd_emas.speaker_table'));
+        $this->setTable(config('ktcd_emas.session_speaker_table'));
     }
 }

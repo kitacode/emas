@@ -46,6 +46,12 @@ return [
         'start_time' => 'Waktu Mulai Berlaku',
         'end_time' => 'Waktu Akhir Berlaku'
     ],
+    'schedule' => [
+        'index' => 'Jadwal',
+        'create' => 'Tambah Jadwal',
+        'edit' => 'Ubah Jadwal',
+        'list' => 'Daftar Jadwal'
+    ],
     'session' => [
         'index' => 'Sesi',
         'create' => 'Tambah Sesi',

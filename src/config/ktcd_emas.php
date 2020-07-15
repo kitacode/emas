@@ -28,6 +28,7 @@ return [
     'participant_table' => 'participants',
     'price_table' => 'prices',
     'session_type_table' => 'session_types',
+    'session_speaker_table' => 'session_speakers',
     'session_table' => 'sessions',
     'speaker_table' => 'speakers',
 

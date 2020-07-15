@@ -73,6 +73,12 @@ class InitialEmasTables extends Migration
             $table->unsignedBigInteger('created_by')->index()->nullable();
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->unsignedBigInteger('event_id')->index()->nullable();
+            $table->timestamps();
+        });
+
+        Schema::create(config('ktcd_emas.session_speaker_table'), function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('speaker_id')->index()->nullable();
             $table->unsignedBigInteger('session_id')->index()->nullable();
             $table->boolean('is_published')->default(1);
             $table->timestamps();
