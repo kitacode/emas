@@ -85,6 +85,7 @@ return [
         'create' => 'Tambah Pembicara',
         'edit' => 'Ubah Pembicara',
         'list' => 'Daftar Pembicara',
-        'total' => 'Jumlah Pembicara'
+        'total' => 'Jumlah Pembicara',
+        'topic' => 'Topik/Materi'
     ],
 ];
