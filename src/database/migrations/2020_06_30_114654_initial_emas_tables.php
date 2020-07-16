@@ -98,6 +98,8 @@ class InitialEmasTables extends Migration
         Schema::create(config('ktcd_emas.speaker_table'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('position')->nullable();;
+            $table->string('duty')->nullable();;
             $table->longText('description')->nullable();
             $table->unsignedBigInteger('created_by')->index()->nullable();
             $table->unsignedBigInteger('updated_by')->index()->nullable();
@@ -166,6 +168,7 @@ class InitialEmasTables extends Migration
             $table->string('pic')->nullable();
             $table->unsignedBigInteger('model_id')->index()->nullable();
             $table->string('model_type')->index()->nullable();
+            $table->string('type')->index()->nullable();
             $table->unsignedBigInteger('created_by')->index()->nullable();
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->unsignedBigInteger('event_id')->index();

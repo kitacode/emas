@@ -19,6 +19,7 @@ class Schedule extends Model
         'pic',
         'model_id',
         'model_type',
+        'type',
         'created_by',
         'updated_by',
         'event_id',

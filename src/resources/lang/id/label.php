@@ -49,10 +49,13 @@ return [
         'end_time' => 'Waktu Akhir Berlaku'
     ],
     'schedule' => [
-        'index' => 'Jadwal',
-        'create' => 'Tambah Jadwal',
-        'edit' => 'Ubah Jadwal',
-        'list' => 'Daftar Jadwal'
+        'index' => 'Susunan Acara',
+        'create' => 'Tambah Susunan Acara',
+        'end_time' => 'Berakhir',
+        'list' => 'Daftar Susunan Acara',
+        'start_time' => 'Mulai',
+        'topic' => 'Topik',
+        'pic' => 'Petugas/Pembicara',
     ],
     'session' => [
         'index' => 'Sesi',

@@ -28,4 +28,9 @@ class SessionParallel extends Model
         parent::__construct($attributes);
         $this->setTable(config('ktcd_emas.session_parallel_table'));
     }
+
+    public function sessions()
+    {
+        return $this->hasMany(Session::class);
+    }
 }
