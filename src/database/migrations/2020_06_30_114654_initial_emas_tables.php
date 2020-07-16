@@ -92,6 +92,7 @@ class InitialEmasTables extends Migration
             $table->unsignedBigInteger('speaker_id')->index()->nullable();
             $table->unsignedBigInteger('session_id')->index()->nullable();
             $table->boolean('is_published')->default(1);
+            $table->smallInteger('schedule_order')->nullable();
             $table->timestamps();
         });
 

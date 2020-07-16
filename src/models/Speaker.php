@@ -9,7 +9,7 @@ class Speaker extends Model
     protected $fillable = [
         'id',
         'name',
-        'title',
+        'position',
         'duty',
         'description',
         'created_by',
