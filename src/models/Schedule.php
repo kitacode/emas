@@ -45,6 +45,6 @@ class Schedule extends Model
 
     public function groupItems()
     {
-        return $this->hasMany(Schedule::class, 'group_id');
+        return $this->hasMany(Schedule::class, 'group_id')->orderBy('start_time', 'asc');
     }
 }
