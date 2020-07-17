@@ -51,6 +51,7 @@ return [
     'schedule' => [
         'index' => 'Susunan Acara',
         'create' => 'Tambah Susunan Acara',
+        'edit' => 'Ubah Susunan Acara',
         'end_time' => 'Berakhir',
         'group' => [
             'index' => 'Pengelompokan Susunan Acara',

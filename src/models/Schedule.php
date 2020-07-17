@@ -37,4 +37,14 @@ class Schedule extends Model
         parent::__construct($attributes);
         $this->setTable(config('ktcd_emas.schedule_table'));
     }
+
+    public function detail()
+    {
+        return $this->morphTo('modelable',  'model_type', 'model_id'); 
+    }
+
+    public function groupItems()
+    {
+        return $this->hasMany(Schedule::class, 'group_id');
+    }
 }
