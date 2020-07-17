@@ -8,6 +8,7 @@ class SessionSpeaker extends Model
 {
     protected $fillable = [
         'id',
+        'description',
         'topic',
         'speaker_id',
         'session_id',
