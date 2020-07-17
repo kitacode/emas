@@ -52,6 +52,11 @@ return [
         'index' => 'Susunan Acara',
         'create' => 'Tambah Susunan Acara',
         'end_time' => 'Berakhir',
+        'group' => [
+            'index' => 'Pengelompokan Susunan Acara',
+            'create' => 'Tambah Pengelompokan Susunan Acara',
+            'edit' => 'Ubah Pengelompokan Susunan Acara',
+        ],
         'list' => 'Daftar Susunan Acara',
         'start_time' => 'Mulai',
         'topic' => 'Topik',

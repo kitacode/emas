@@ -173,6 +173,8 @@ class InitialEmasTables extends Migration
             $table->unsignedBigInteger('created_by')->index()->nullable();
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->unsignedBigInteger('event_id')->index();
+            $table->unsignedBigInteger('group_id')->index()->nullable();
+            $table->boolean('is_group')->default(0);
             $table->boolean('is_published')->default(1);
             $table->timestamps();
         });

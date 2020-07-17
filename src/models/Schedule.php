@@ -25,6 +25,8 @@ class Schedule extends Model
         'event_id',
         'session_type_id',
         'link',
+        'group_id',
+        'is_group',
         'is_published',
         'created_at',
         'updated_at'
