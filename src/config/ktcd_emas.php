@@ -32,6 +32,7 @@ return [
 
     'session_table' => 'sessions',
     'session_parallel' => 'session_parallels',
+    'session_participant_table' => 'session_participants',
     'session_speaker_table' => 'session_speakers',
     'session_type_table' => 'session_types',
     

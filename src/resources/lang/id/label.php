@@ -64,6 +64,7 @@ return [
         'pic' => 'Petugas/Pembicara',
     ],
     'session' => [
+        'id' => 'ID Sesi',
         'index' => 'Sesi',
         'create' => 'Tambah Sesi',
         'edit' => 'Ubah Sesi',

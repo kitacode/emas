@@ -85,12 +85,20 @@ class InitialEmasTables extends Migration
             $table->timestamps();
         });
 
+        Schema::create(config('ktcd_emas.session_participant_table'), function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('participant_id')->index();
+            $table->unsignedBigInteger('session_id')->index();
+            $table->boolean('is_approved')->default(0);
+            $table->timestamps();
+        });
+
         Schema::create(config('ktcd_emas.session_speaker_table'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->longText('description')->nullable();
             $table->longText('topic')->nullable();
-            $table->unsignedBigInteger('speaker_id')->index()->nullable();
-            $table->unsignedBigInteger('session_id')->index()->nullable();
+            $table->unsignedBigInteger('speaker_id')->index();
+            $table->unsignedBigInteger('session_id')->index();
             $table->boolean('is_published')->default(1);
             $table->smallInteger('schedule_order')->nullable();
             $table->timestamps();
@@ -191,6 +199,7 @@ class InitialEmasTables extends Migration
         Schema::dropTable(config('ktcd_emas.session_type_table'));
         Schema::dropTable(config('ktcd_emas.session_table'));
         Schema::dropTable(config('ktcd_emas.speaker_table'));
+        Schema::dropTable(config('ktcd_emas.session_participant_table'));
         Schema::dropTable(config('ktcd_emas.session_speaker_table'));
         Schema::dropTable(config('ktcd_emas.price_table'));
         Schema::dropTable(config('ktcd_emas.accommodation_table'));
