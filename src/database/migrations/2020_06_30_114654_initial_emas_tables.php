@@ -156,12 +156,15 @@ class InitialEmasTables extends Migration
             $table->string('phone_2')->nullable();
             $table->longText('address')->nullable();
             $table->string('country')->nullable();
+            $table->string('registration_number')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->unsignedBigInteger('event_id')->index()->nullable();
             $table->unsignedBigInteger('created_by')->index()->nullable();
             $table->unsignedBigInteger('updated_by')->index()->nullable();
             $table->rememberToken();
             $table->timestamps();
+
+            $table->unique(['event_id', 'registration_number']);
         });
 
         Schema::create(config('ktcd_emas.schedule_table'), function (Blueprint $table) {

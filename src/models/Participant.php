@@ -22,18 +22,39 @@ class Participant extends Authenticatable
         'phone_2',
         'address',
         'country',
+        'registration_number',
         'email_verified_at',
         'event_id',
         'created_by',
         'updated_by',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        self::created(function($m){
+            if (!$m->registration_number) {
+                $latestParticipant = Participant::where('event_id', $m->event_id)->latest('registration_number')->first();
+
+                if ($latestParticipant) {
+                    $last = intval($latestParticipant->registration_number);
+                } 
+                else {
+                    $last = 0;
+                }
+                
+                $next_registration = strval($last + 1);
+                $digits = 4 - strlen($next_registration);
+                $registration_number = str_repeat('0', $digits) . $next_registration;
+                // update
+                $m->registration_number = $registration_number;
+                $m->save();            
+            }
+        });
+    }
 }

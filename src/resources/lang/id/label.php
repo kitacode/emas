@@ -37,7 +37,8 @@ return [
         'index' => 'Peserta',
         'create' => 'Tambah Peserta',
         'edit' => 'Ubah Peserta',
-        'list' => 'Daftar Peserta'
+        'list' => 'Daftar Peserta',
+        'registration_number' => 'Nomor Registrasi'
     ],
     'price' => [
         'index' => 'Harga',
