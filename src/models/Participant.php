@@ -37,7 +37,7 @@ class Participant extends Authenticatable
     {
         parent::boot();
 
-        self::created(function($m){
+        self::saved(function($m){
             if (!$m->registration_number) {
                 $latestParticipant = Participant::where('event_id', $m->event_id)->latest('registration_number')->first();
 
