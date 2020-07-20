@@ -57,4 +57,9 @@ class Participant extends Authenticatable
             }
         });
     }
+
+    public function participantSessions()
+    {
+        return $this->hasMany(SessionParticipant::class, 'participant_id');
+    }
 }

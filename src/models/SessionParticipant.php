@@ -20,4 +20,9 @@ class SessionParticipant extends Model
         parent::__construct($attributes);
         $this->setTable(config('ktcd_emas.session_participant_table'));
     }
+
+    public function session()
+    {
+        return $this->belongsTo(Session::class);
+    }
 }
