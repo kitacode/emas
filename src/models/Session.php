@@ -22,6 +22,7 @@ class Session extends Model
         'session_type_id',
         'session_parallel_id',
         'link',
+        'can_ask',
         'is_published',
         'created_at',
         'updated_at'

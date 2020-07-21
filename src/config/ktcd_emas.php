@@ -38,6 +38,8 @@ return [
     
     'speaker_table' => 'speakers',
 
+    'question_table' => 'questions',
+
     'format' => [
         'date' => $dateFormat,
         'time' => $timeFormat,

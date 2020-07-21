@@ -56,6 +56,7 @@ class InitialEmasTables extends Migration
             $table->unsignedBigInteger('session_parallel_id')->index()->nullable();
             $table->longText('link')->nullable();
             $table->boolean('is_published')->default(1);
+            $table->boolean('can_ask')->default(0);
             $table->timestamps();
         });
 
@@ -189,6 +190,16 @@ class InitialEmasTables extends Migration
             $table->boolean('is_published')->default(1);
             $table->timestamps();
         });
+
+        Schema::create(config('ktcd_emas.question_table'), function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->longText('question')->nullable();
+            $table->unsignedBigInteger('event_id')->index()->nullable();
+            $table->unsignedBigInteger('session_id')->index()->nullable();
+            $table->unsignedBigInteger('participant_id')->index()->nullable();
+            $table->boolean('was_read')->default(0);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -208,5 +219,6 @@ class InitialEmasTables extends Migration
         Schema::dropTable(config('ktcd_emas.accommodation_table'));
         Schema::dropTable(config('ktcd_emas.participant_table'));
         Schema::dropTable(config('ktcd_emas.schedule_table'));
+        Schema::dropTable(config('ktcd_emas.question_table'));
     }
 }

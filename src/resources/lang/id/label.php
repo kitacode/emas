@@ -68,6 +68,7 @@ return [
     'session' => [
         'id' => 'ID Sesi',
         'index' => 'Sesi',
+        'can_ask' => 'Peserta Dapat Bertanya',
         'create' => 'Tambah Sesi',
         'edit' => 'Ubah Sesi',
         'end_date' => 'Tanggal Akhir Sesi',
