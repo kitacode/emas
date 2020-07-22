@@ -50,6 +50,10 @@ return [
         'start_time' => 'Waktu Mulai Berlaku',
         'end_time' => 'Waktu Akhir Berlaku'
     ],
+    'question' => [
+        'index' => 'Pertanyaan',
+        'list' => 'Daftar Pertanyaan',
+    ],
     'schedule' => [
         'index' => 'Susunan Acara',
         'create' => 'Tambah Susunan Acara',
