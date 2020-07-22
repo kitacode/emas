@@ -20,6 +20,6 @@ class Question extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->setTable(config('ktcd_emas.speaker_table'));
+        $this->setTable(config('ktcd_emas.question_table'));
     }
 }
