@@ -157,6 +157,8 @@ class InitialEmasTables extends Migration
             $table->string('phone_2')->nullable();
             $table->longText('address')->nullable();
             $table->string('country')->nullable();
+            $table->string('institution')->nullable();
+            $table->string('occupation')->nullable();
             $table->string('registration_number')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->unsignedBigInteger('event_id')->index()->nullable();

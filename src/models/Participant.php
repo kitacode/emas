@@ -22,6 +22,8 @@ class Participant extends Authenticatable
         'phone_2',
         'address',
         'country',
+        'institution',
+        'occupation',
         'registration_number',
         'email_verified_at',
         'event_id',
