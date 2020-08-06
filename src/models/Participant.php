@@ -35,6 +35,8 @@ class Participant extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public static $defaultPassword = '123456';
+    
     public static function boot()
     {
         parent::boot();
