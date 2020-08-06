@@ -58,7 +58,8 @@ return [
         'index' => 'Registrasi'
     ],
     'report' => [
-        'index' => 'Laporan'
+        'index' => 'Laporan',
+        'list' => 'Daftar Laporan'
     ],
     'schedule' => [
         'index' => 'Susunan Acara',
