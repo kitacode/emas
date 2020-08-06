@@ -54,6 +54,9 @@ return [
         'index' => 'Pertanyaan',
         'list' => 'Daftar Pertanyaan',
     ],
+    'registration' => [
+        'index' => 'Registrasi',
+    ],
     'schedule' => [
         'index' => 'Susunan Acara',
         'create' => 'Tambah Susunan Acara',
