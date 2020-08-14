@@ -50,6 +50,9 @@ return [
         'start_time' => 'Waktu Mulai Berlaku',
         'end_time' => 'Waktu Akhir Berlaku'
     ],
+    'poster' => [
+        'id' => 'Poster ID'
+    ],
     'question' => [
         'index' => 'Pertanyaan',
         'list' => 'Daftar Pertanyaan',
