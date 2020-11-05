@@ -116,4 +116,7 @@ return [
         'total' => 'Jumlah Pembicara',
         'topic' => 'Topik/Materi'
     ],
+    'sponsor' => [
+        'index' => 'Sponsor'
+    ],
 ];
